@@ -5,5 +5,5 @@
   tasks:
     - name: check update
       become: true
-      yum: 
-        name: check-update
+      yum: list=updates update_cache=true
+      
