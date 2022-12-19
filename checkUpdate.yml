@@ -9,4 +9,4 @@
     register: yumoutput
     when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
   - debug: var=yumoutput
-    msg: "{{ yumoutput.results | map(attribute='name') | list }}
+    msg: "{{ yumoutput.results | map(attribute='name') | list }}"
