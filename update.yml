@@ -12,7 +12,7 @@
   - name: Update all security updates
     become: true
     yum:
-      name: 'upgrade security'
+      name: 'upgrade,security'
       state: latest
       update_cache: yes
       update_only: yes
