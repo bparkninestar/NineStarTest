@@ -4,5 +4,6 @@
   
   tasks:
     - name: check update
+      become: yes
       yum: 
         name: check-update
