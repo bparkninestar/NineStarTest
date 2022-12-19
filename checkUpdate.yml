@@ -1,0 +1,8 @@
+---
+- name: check updates
+  hosts: all
+  
+  tasks:
+    - name: check update
+      yum: 
+        name: check-update
