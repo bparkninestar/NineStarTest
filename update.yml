@@ -15,4 +15,3 @@
       name: 'upgrade,security'
       state: latest
       update_cache: yes
-    register: yum_update_status
