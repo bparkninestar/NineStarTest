@@ -1,9 +1,13 @@
 ---
 - name: check updates
   hosts: all
+  gather_facts: true
   
   tasks:
-    - name: check update
+    - name: check for updates
       become: true
       yum: list=updates update_cache=true
+      register: yumoutput
+    - debug: 
+        msg: "{{ yumoutput.results | map(attribute='name') | list }}
       
