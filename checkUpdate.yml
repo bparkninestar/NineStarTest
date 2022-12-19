@@ -8,6 +8,6 @@
       become: true
       yum: list=updates update_cache=true
       register: yumoutput
-    - debug: 
+    - debug: var=yumoutput
         msg: "{{ yumoutput.results | map(attribute='name') | list }}"
       
