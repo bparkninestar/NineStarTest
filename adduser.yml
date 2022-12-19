@@ -1,0 +1,10 @@
+---
+
+- name: Add user
+  hosts: all
+  user: 
+    name: "{{ my_username }}"
+    createhome: yes
+    
+  
+    
