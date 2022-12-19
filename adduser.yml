@@ -1,10 +1,11 @@
 ---
-
-- name: Add user
-  hosts: all
-  user: 
-    name: "{{ my_username }}"
-    createhome: yes
+- hosts: all
+  become: yes
+  tasks:
+   - name: Add user
+     user: 
+       name: "{{ my_username }}"
+       createhome: yes
     
   
     
