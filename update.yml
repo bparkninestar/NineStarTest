@@ -2,6 +2,7 @@
 - hosts: all
   tasks:
   - name: Update all installed packages using YUM module
+    become: true
     yum:
       name: '*'
       state: latest
