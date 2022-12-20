@@ -7,9 +7,6 @@
        name: "{{ my_username }}"
        createhome: yes
        shell: /bin/bash
-   - name: Force user to change password 
-     command:
-         chage -d 0 "{{ my_username }}"
    - name: encrypt and set password
      command: 
          useradd -p $(openssl passwd -1 -salt "{{ my_password }}") "{{ my_username }}"
