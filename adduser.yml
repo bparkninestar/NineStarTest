@@ -9,7 +9,7 @@
        shell: /bin/bash
    - name: encrypt and set password
      command: 
-         useradd -p $(echo "{{ my_password }}" | openssl passwd -1 -stdin) "{{ my_username }}"
+         useradd -p ($(echo "{{ my_password }}" | openssl passwd -1 -stdin)) "{{ my_username }}"
          
          
   
