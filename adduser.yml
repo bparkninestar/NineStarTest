@@ -7,6 +7,7 @@
        name: "{{ my_username }}"
        createhome: yes
        password: "{{ my_password }}"
+       shell: /bin/bash
    - name: Force user to change password 
      command:
          chage -d 0 "{{ my_username }}"
