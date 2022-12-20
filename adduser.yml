@@ -7,7 +7,7 @@
          useradd {{ my_username }}
    - name: encrypt
      command:
-         echo "{{ my_password }}" | passwd "{{ my_username }}"
+         echo {{ my_password }} | passwd {{ my_username }}
          
   
     
