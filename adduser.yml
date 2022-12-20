@@ -2,10 +2,11 @@
 - hosts: all
   become: yes
   tasks:
-   - name: Creating user "{{ uusername }}" with admin access
+   - name: User creation
      user: 
-       name: {{ uusername }}
-       password: {{ upassword | password_hash('sha512') }}
+       name: {{" my_username "}} 
+       shell: /bin/bash
+       password: "$6$xyz$B4JYME7IY/cliQN7xfDFXmq87nr/vFeUlUqOVxLSEUFQkYTiGAHhwspgKevfh0DROnfpCkPhG8kXYF9J6AMNI1"
 
          
   
