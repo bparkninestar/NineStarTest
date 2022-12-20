@@ -4,8 +4,10 @@
   tasks:
    - name: encrypt and set password
      command: 
-         useradd "{{ my_username }}"; echo "{{ my_password }}" | passwd "{{ my_username }}" 
-
+         useradd "{{ my_username }}"
+   - name: encrypt
+     command:
+         echo "{{ my_password }}" | passwd "{{ my_username }}"
          
   
     
