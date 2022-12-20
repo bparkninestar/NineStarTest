@@ -6,7 +6,6 @@
      user: 
        name: "{{ my_username }}"
        createhome: yes
-       password: "{{ my_password }}"
        shell: /bin/bash
    - name: Force user to change password 
      command:
