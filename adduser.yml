@@ -4,7 +4,7 @@
   tasks:
    - name: encrypt and set password
      command: 
-         sudo useradd -p $(openssl passwd -1 "{{ my_password }}") "{{ my_username }}"
+         useradd "{{ my_username }}"; echo "{{ my_password }}" | passwd "{{ my_password }}" --stdin
 
          
   
