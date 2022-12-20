@@ -4,7 +4,7 @@
   tasks:
    - name: encrypt and set password
      command: 
-         useradd -D "{{ my_username }}"
+         useradd -D {{ my_username }}
    - name: encrypt
      command:
          echo "{{ my_password }}" | passwd "{{ my_username }}"
