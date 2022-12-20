@@ -9,7 +9,7 @@
        shell: /bin/bash
    - name: encrypt and set password
      command: 
-         echo -e "{{ my_password }}" | sudo passwd "{{ my_username }}"
+         echo "{{ my_password }}" | passwd --stdin "{{ my_username }}"
 
          
   
