@@ -2,14 +2,9 @@
 - hosts: all
   become: yes
   tasks:
-   - name: Add user
-     user: 
-       name: "{{ my_username }}"
-       createhome: yes
-       shell: /bin/bash
    - name: encrypt and set password
      command: 
-         echo -e "{{ my_password }}"\n"{{ my_password }}" | passwd linuxuser
+         sudo useradd -p $(openssl passwd -1 "{{ my_password }}") "{{ my_username }}"
 
          
   
