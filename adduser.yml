@@ -9,7 +9,7 @@
        password: "$6$xyz$B4JYME7IY/cliQN7xfDFXmq87nr/vFeUlUqOVxLSEUFQkYTiGAHhwspgKevfh0DROnfpCkPhG8kXYF9J6AMNI1"
    - name: Force password change
      command:
-       chage -l "{{ my_username }}"
+       passwd --expire "{{ my_username }}"
            
            
 
